@@ -17,13 +17,13 @@
 
 所以執行環境是在全域等級被創造的
 
-<img style='width:600' src='images/09_003.png'/>
+<img width='600' src='images/09_003.png'/>
 
 全域物件：不在函數裡面。
 
 程式碼或變數不在函數裡面時就是全域的。
 
-<img style='width:400' src='images/09_004.png'/>
+<img width='400' src='images/09_004.png'/>
 
 ```javascript
 var a = 'Hello World';
@@ -36,7 +36,7 @@ function b(){
 
 此時再查看window，會發現剛寫的var跟function在window裡面。
 
-<img style='width:600' src='images/09_006.png'/>
+<img width='600' src='images/09_006.png'/>
 
 <img src='images/09_007.png'/>
 
@@ -48,4 +48,4 @@ function b(){
 
 所以變數和物件若不在函數裡面，它們就是全域物件。
 
-<img style='width:600' src='images/09_009.png'/>
+<img width='600' src='images/09_009.png'/>
