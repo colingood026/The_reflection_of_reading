@@ -5,7 +5,7 @@
 1. global object
 2. special variable:this
 
-<img style='width:600' src='images/09_001.png'/>
+<img width='600' src='images/09_001.png'/>
 
 執行空的html跟空的js檔案，雖然甚麼都沒有寫，但因為它已經執行javascript，因為執行了檔案，執行環境被創造了出來，上述兩個：***全域物件***跟***this***，也被創造了出來。
 
