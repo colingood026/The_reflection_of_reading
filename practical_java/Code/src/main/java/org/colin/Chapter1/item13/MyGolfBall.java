@@ -12,8 +12,9 @@ public class MyGolfBall extends Golfball{
 
 
     public MyGolfBall(String brd, String mk, int comp, byte construction){
+        // 將 byte型別的construction傳入Golfball建構子中的int型別不會出事??
         super(brd,mk,comp);
-        this.ballConstruction = ballConstruction;
+        this.ballConstruction = construction;
     }
 
 

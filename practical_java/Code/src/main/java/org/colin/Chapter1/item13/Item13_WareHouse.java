@@ -26,5 +26,7 @@ public class Item13_WareHouse {
         }else{
             System.out.println("mgb3 not equals mgb4");
         }
+
+        
     }
 }
