@@ -1,6 +1,6 @@
 # 12.執行環境 - 程式執行
 
-<img src='images/12_001.png' width='600'/>
+<img src='images/12_001.jpg' width='600'/>
 
 > 執行環境：先創造(A) -> 後執行(B)
 
@@ -14,7 +14,7 @@ var a = 'hello world';
 console.log(a); // 2
 ```
 
-<img src='images/12_002.png' width='200'>
+<img src='images/12_002.jpg' width='200'>
 
 兩次console.log(a)的結果並不一樣。
 
