@@ -38,12 +38,8 @@ console.log('finished execution');
 
 正常情況下，滑鼠沒有在點擊的動作。
 
-
-
-<img src='images/18_003.jpg'>
+<img src='images/18_003_.jpg'>
 
 在 waitThreeSeconds(); 其間滑鼠點擊，console.log('clikc event');在最後才被印出來。
 
-
-
-<img src='images/18_004.jpg'>
+<img src='images/18_004_.jpg'>
