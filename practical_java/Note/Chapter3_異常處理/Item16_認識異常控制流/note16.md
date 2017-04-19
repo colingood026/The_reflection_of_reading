@@ -16,3 +16,7 @@
 
 Java支援垃圾回收，函式無論是正常結束，或因異常被迫退哩，該函示所創建的所有物件都會自動被解除引用(unreferenced)，因此不需要手動對這些object references解除引用。但必須明確清理non-memory資源。
 
+------------
+
+[item16](../../Chapter2_物件與相等性/Item14_在equals()中謹慎使用instanceof/14note.md)
+
