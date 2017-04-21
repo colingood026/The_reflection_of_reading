@@ -20,7 +20,7 @@ public class ReadFileExceptions extends IOException{
 		return excVector;
 	}
 }
-// 範例
+// 執行範例
 Vector excVector = new Vector(2);
 BufferedReader br = null;
 try{
