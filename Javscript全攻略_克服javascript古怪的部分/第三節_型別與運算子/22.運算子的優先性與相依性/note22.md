@@ -33,8 +33,6 @@ console.log(a = b); // 3
 
 
 
-[][]
-
 [][][][]
 
 | 標點符號 | 英文                                       |
@@ -49,7 +47,7 @@ console.log(a = b); // 3
 |  @   | at                                       |
 |  #   | hashtag/number                           |
 |  /   | slash                                    |
-|  ~   | tiler                                    |
+|  ~   | tilde                                    |
 |  -   | hyphen(連字號)                              |
 |  —   | dash(破折號)(但是：e-mail裡面那個常會說dash)          |
 |  _   | underline                                |
