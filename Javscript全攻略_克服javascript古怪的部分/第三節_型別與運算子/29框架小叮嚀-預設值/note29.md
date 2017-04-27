@@ -40,7 +40,8 @@ console.log(libararyName); // lib2
 ```javascript
 // lib2.js
 window.libraryName = window.libraryName || 'lib2';
-// 因為libratyName位於全域環境，所以可以用window.libraryName取得
+// 這是在檢查全域命名空間(global namespace)或全域物件(global object)看是否已經有那個名稱了。
+// 因為libratyName位於全域環境，所以可以用window.libraryName取得。
 ```
 
 ```javascript
