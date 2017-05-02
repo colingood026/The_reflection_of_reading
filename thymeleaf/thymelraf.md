@@ -1,5 +1,19 @@
 # Thymeleaf
 
+相比其他模板引擎，Thymeleaf的特點：
+
+1. 只專注於XML。
+2. 基於XML標籤和屬性。
+3. 本身是格式良好的HTML文件，可以直接被瀏覽器打開並正確顯示，不需要啟動整個WEB應用。
+
+也就是說之前在JSP修改了一行css，必須要啟動SERVER才能看到效果，但是在Thymeleaf中可以直接用瀏覽器查看修改後的效果。
+
+如果是希望為專案引用一款模板引擎，Thymeleaf是不二選擇；但如果還需要處理其他類型的模板，那Thymeleaf就不適合了。
+
+
+
+
+
 <a href='http://www.thymeleaf.org/doc/articles/layouts.html'>參考來源1</a> -> 裡面的第四章節：「Thymeleaf Tiles Integration」
 
 <a href='http://spring.io/blog/2012/10/30/spring-mvc-from-jsp-and-tiles-to-thymeleaf/'>參考來源2</a>
