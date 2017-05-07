@@ -56,3 +56,12 @@ overridden method does not throw java.io.IOException
 3. 拋出FileNotFoundException的衍生異常
 
 如果覆寫時新增加的code拋出異常，必須就地處理。
+
+--------------------------
+
+補充：如果一個method的回傳型別是Employee，但同時有錯誤的時候要回傳錯誤訊息：
+
+1. 自訂一個exception，包含錯誤訊息，外面try catch接住
+2. 自訂一個BO，屬性有Employee跟錯誤訊息，外面先確認getDate是否為null
+3. 定義一個interface，方法有getErrorMsg跟setErrorMsg，Employee實作這個interface。
+4. guava Pair
