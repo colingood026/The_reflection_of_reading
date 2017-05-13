@@ -14,6 +14,8 @@
 
 但跟純值不同的是，將一個物件設定給變數 a，再設定一個新變數 b等於 a，這兩個變數都是指向同一個記憶體位址，b不會指向一個新位址，而是指向 a的記憶體位址，沒有新的物件被創造，沒有物件的拷貝被創造。
 
+可以想像成這個物件有了兩個別名。
+
 <img src='images/36_002.jpg' width='700'>
 
 
@@ -56,7 +58,7 @@ console.log(d.language); // france
 function changeLanguage(obj){
 	obj.language = 'chinese';
 }
-changeLanguage(d);
+changeLanguage(d); // obj = d;
 console.log(c.language); // chinese
 console.log(d.language); // chinese
 ```
