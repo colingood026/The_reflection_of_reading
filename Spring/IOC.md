@@ -1,3 +1,5 @@
+# Inversion of Control
+
 What is IOC(Inversion of Control)?
 
 IoC 的抽象概念是「依賴關係的轉移」
@@ -15,9 +17,4 @@ Dependency Inversion 的意思即是程式不依賴於實作，而是程式與�
 改寫之後整個控制權從實際的HDD轉移到抽象的DISK介面，使得PC、HDD、SSD依賴於抽象的DISK介面。
 
 
-
-實現IOC的兩種方式：
-
-1. Dependency Injection
-2. Service Locator
 

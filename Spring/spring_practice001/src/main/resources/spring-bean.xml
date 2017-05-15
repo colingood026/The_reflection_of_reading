@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <!--type2-->
+    <bean id="hdd" class="org.colin.withSpring.IOC_type2.parts.Hdd"></bean>
+
+    <bean id="ssd" class="org.colin.withSpring.IOC_type2.parts.Ssd"></bean>
+
+    <bean id="hddType2Pc" class="org.colin.withSpring.IOC_type2.Type2_Pc">
+        <property name="disk" ref="hdd"/>
+    </bean>
+
+    <bean id="ssdType2Pc" class="org.colin.withSpring.IOC_type2.Type2_Pc">
+        <property name="disk" ref="ssd"/>
+    </bean>
+
+    <!--type3-->
+    <bean id="type3_hdd" class="org.colin.withSpring.IOC_type3.parts.Hdd"></bean>
+
+    <bean id="type3_ssd" class="org.colin.withSpring.IOC_type3.parts.Ssd"></bean>
+
+    <bean id="hddType3Pc" class="org.colin.withSpring.IOC_type3.Type3_Pc">
+        <constructor-arg ref="type3_hdd"/>
+    </bean>
+
+    <bean id="ssdType3Pc" class="org.colin.withSpring.IOC_type3.Type3_Pc">
+        <constructor-arg ref="type3_ssd"/>
+    </bean>
+
+
+</beans>
