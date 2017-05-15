@@ -15,6 +15,8 @@ Type 1 IoC具有強的侵入性，使用它來實現依賴注入會使得組件�
 
 [spring沒有實作 interface injection](http://stackoverflow.com/questions/10248000/spring-interface-injection-example)
 
+[網路上迂迴的範例](http://namanmehta.blogspot.tw/2010/01/interface.html)
+
 ### Type 2 IoC(Setter injection)
 
 [type2實作](spring_practice001/src/main/java/org/colin/withSpring/IOC_type2)
