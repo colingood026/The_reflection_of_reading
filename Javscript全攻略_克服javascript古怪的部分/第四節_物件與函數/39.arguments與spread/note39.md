@@ -13,6 +13,8 @@
 
 javascript允許呼叫函數時**不給參數**，或是傳入的**參數數量大於函數所宣告的數量**。
 
+javascript會從**左到右**處理傳入函數的參數。
+
 ### arguments
 
 > ### 參數(arguments)
@@ -29,8 +31,8 @@ function greeting(firstName, lastName, language){
     console.log(arguments);
 }        
 greeting();
-greeting('Colin');
-greeting('Colin','James');        
+greeting('Colin'); // firstName:Colin,lastName:undefined,language:undefined
+greeting('Colin','James'); // firstName:Colin,lastName:James,language:undefined
 greeting('Colin','James','Ford');
 greeting('Colin','James','Ford','Colin1','James1','Ford1');
 ------------------------
