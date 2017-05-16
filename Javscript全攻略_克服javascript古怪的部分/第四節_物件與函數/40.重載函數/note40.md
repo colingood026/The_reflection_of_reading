@@ -20,3 +20,4 @@ greetingEnglish('John','Doe');
 greetingSpanish('Colin','Lee');
 ```
 
+補充：[一級函數](http://www.ithome.com.tw/node/75500)
