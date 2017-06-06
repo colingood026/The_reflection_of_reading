@@ -85,6 +85,37 @@ public class SpringTest {
 }
 ```
 
+### 為組件掃描的Bean命名
+
+若沒有特別命名，spring會自動給予Bean一個ID，以上述的例子來說，就是class名稱第一個字母小寫 - sgtPeppers。
+
+```java
+@Component
+public class SgtPeppers implements CompactDisc{
+	...   
+}
+```
+
+使用@Component註解加入自訂ID：
+
+```java
+@Component("lonelyHome")
+public class SgtPeppers implements CompactDisc{
+	...   
+}
+```
+
+使用@Named註解加入自訂ID：
+
+```java
+@Named("lonelyHome")
+public class SgtPeppers implements CompactDisc{
+	...   
+}
+```
+
+-----
+
 <a name='javaConfig'>顯式：Java Config配置</a>
 
 
