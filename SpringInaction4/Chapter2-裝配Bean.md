@@ -1,0 +1,99 @@
+spring配置的三種方案
+
+顯式：XML配置
+
+<a href='#javaConfig'>顯式：Java Config配置</a>
+
+<a href='#autowire'>隱式：自動裝配</a>
+
+-----
+
+## <a name='autowire'>隱式：自動裝配</a>
+
+使用兩種方式實現自動化裝配：
+
+> component scanning
+>
+> autowiring
+
+### 建立可被發現的Bean：
+
+```java
+package org.soundSystem;
+
+public interface CompactDisc {
+    void play();
+}
+```
+
+@Component註解表明該類為組件類，並告訴spring要為這個類創建一個Bean。
+
+```javascript
+package org.soundSystem;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SgtPeppers implements CompactDisc{
+
+    private String title = "Lonely home";
+    private String artist = "The Beatles";
+
+    @Override
+    public void play() {
+        System.out.println("playing "+title+" by "+artist);
+    }
+}
+```
+
+組件掃描預設是不啟用的，還需要一些設定命令spring去尋找帶有@Component註解的類，下面的寫法是最簡潔的配置。
+
+@Configuration註解啟用了組件掃描。
+
+如果沒有其他設定的話，@Configuration預設會掃描與配置類(CdPlayerConfig)相同的package。
+
+```java
+package org.soundSystem;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan
+public class CdPlayerConfig {
+}
+```
+
+如果喜歡使用xml配置去啟動組件掃描的話，下列寫法有一樣的效果
+
+```xml
+<context:component-scan base-package="org.soundSystem" />
+```
+
+測試：
+
+```java
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {CdPlayerConfig.class})
+public class SpringTest {
+    @Autowired
+    private CompactDisc cd;
+    @Test
+    public void test() {
+        System.out.println(cd == null ? true : false);
+    }
+}
+```
+
+<a name='javaConfig'>顯式：Java Config配置</a>
+
+
+
+
+
+
+
+
+
+
+
