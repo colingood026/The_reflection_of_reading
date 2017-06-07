@@ -86,7 +86,7 @@ public class SgtPeppers implements CompactDisc{
 }
 ```
 
-使用@Component註解加入自訂ID：
+使用spring的@Component註解加入自訂ID：
 
 ```java
 @Component("lonelyHome")
@@ -95,7 +95,7 @@ public class SgtPeppers implements CompactDisc{
 }
 ```
 
-使用@Named註解加入自訂ID：
+使用java規範的@Named註解加入自訂ID：
 
 ```java
 @Named("lonelyHome")
@@ -141,3 +141,68 @@ public class CdPlayerConfig {
 public class CdPlayerConfig {
 }
 ```
+
+### 通過為Bean添加註解實現自動裝配
+
+為了聲明進行自動裝配，使用@Autowired註解
+
+用在建構子上面
+
+```java
+@Component
+public class CdPlayer implements MediaPlayer {
+
+    private CompactDisc cd;
+
+    @Autowired
+    public CdPlayer(CompactDisc cd){
+        this.cd = cd;
+    }
+
+    @Override
+    public void play() {
+
+    }
+}
+```
+
+用在setter
+
+```java
+@Autowired
+public void setCd(CompactDisc cd) {
+	this.cd = cd;
+}
+```
+
+用在其他方法上面
+
+```java
+@Autowired
+public void initCd(CompactDisc cd) {
+	this.cd = cd;
+}
+```
+
+如果spring在自動裝配時沒有發現匹配的bean，會拋出異常，為了避免異常出現可以將required設定為false。這時spring在進行自動裝配時若沒有找到匹配的bean，則會讓這個Bean處於未匹配狀態。但是要檢查這個Bean為Null的狀況。
+
+如果有多個Bean都滿足依賴關係的話，spring也會拋出異常，這在第三章會講到。
+
+```java
+@Autowired(required = false)
+public void initCd(CompactDisc cd) {
+	this.cd = cd;
+}
+```
+
+若不想使用spring的@Autowired註解的話，可以使用java規範的@Inject註解。
+
+```java
+@Inject
+public void initCd(CompactDisc cd) {
+	this.cd = cd;
+}
+```
+
+
+
