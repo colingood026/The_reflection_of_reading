@@ -104,3 +104,40 @@ public class SgtPeppers implements CompactDisc{
 }
 ```
 
+### 設置組件掃描的基礎包
+
+若想要將配置類與組件類分開存放，那就得指定掃描的package。
+
+```java
+@Configuration
+@ComponentScan("org.soundSystem")
+public class CdPlayerConfig {
+}
+```
+
+```java
+@Configuration
+@ComponentScan(basePackages = "org.soundSystem")
+public class CdPlayerConfig {
+}
+```
+
+可以接受多個package
+
+```java
+@Configuration
+@ComponentScan(basePackages = {"org.soundSystem", "org.pc"})
+public class CdPlayerConfig {
+}
+```
+
+以上指定基礎包的方式是用String類型表示的，但這種方法式類型不安全的，一旦重構代碼之後所指定的基礎包可能就會出錯了。
+
+所以也可以指定配置的class
+
+```java
+@Configuration
+@ComponentScan(basePackageClasses = { CdPlayerConfig.class })
+public class CdPlayerConfig {
+}
+```
