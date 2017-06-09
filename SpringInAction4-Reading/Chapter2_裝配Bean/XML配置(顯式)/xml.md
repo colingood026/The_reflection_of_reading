@@ -30,13 +30,13 @@
 
 ### 藉由建構子初始化Bean：
 
-> <constructor-arg>元素
+> \<constructor-arg\>元素
 >
 > c-命名空間
 
 #### 注入Bean
 
-##### constructor-arg元素
+##### \<constructor-arg\>元素
 
 ```xml
 <bean class="org.soundSystem.CdPlayer">
@@ -84,7 +84,7 @@ public class CdPlayer{
 }
 ```
 
-##### constructor-arg元素
+##### \<constructor-arg\>元素
 
 ```xml
 <bean class="org.soundSystem.CdPlayer">
@@ -101,6 +101,6 @@ public class CdPlayer{
       c:add="100 Taipei St"/>
 ```
 
-在注入Bean與注入值的時候[constructor-arg元素]與[c-命名空間]的功能都是相同的，但有一種情況是只有[]
+在注入Bean與注入值的時候\<constructor-arg元素\>與[c-命名空間]的功能都是相同的，但有一種情況是只有[]
 
 [constructor-arg元素]能做到的：注入集合。
